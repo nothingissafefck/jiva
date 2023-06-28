@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Душа: кофе и растения">
+    <title>Душа: растения и кофе</title>
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/montserrat/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="sass/style.scss">
+</head>
+<body>
+    <div class="wrapper">
+        {{> header }}
+
+        <main>
+            <section class="intro">
+                <div class="bg"></div>
+                <div class="container intro__container">
+                    <h1>Душа: растения и кофе</h1>
+                    <p>насладись ароматным кофе в тропической атмосфере</p>
+                </div>
+            </section>
+
+            <section class="about" id="about">
+                <div class="container about__container">
+                    <h3>Кто мы такие и чем занимаемся?</h3>
+                    <img src="img/about.jpg" width="250" height="250" alt="Но сначала кофе.">
+                    <p>Мы делаем вкуснейший кофе из сортов арабики и продаем редкие растения. Вы можете заметить, что на
+                        наших
+                        стаканчиках написано слово JIVA, что в переводе с латыни означает "Душа". А ознакомиться со
+                        всеми
+                        нашими растениями и выбрать самое красивое можно в каталоге.
+                        Мы делаем вкуснейший кофе из сортов арабики и продаем редкие растения. Вы можете заметить, что
+                        на
+                        наших
+                        стаканчиках написано слово JIVA, что в переводе с латыни означает "Душа". А ознакомиться со
+                        всеми
+                        нашими растениями и выбрать самое красивое можно в каталоге.</p>
+                </div>
+            </section>
+
+            <section class="advantages" id="advantages">
+                <div class="container advantages__container">
+                    <h2>Наши преимущества</h2>
+                    <ul>
+                        <li>
+                            <svg aria-hidden="true" focusable="false" width="40" height="40">
+                                <use href="img/sprite.svg#icon-leaf"></use>
+                            </svg>
+                            <h3>Уникальный ассортимент</h3>
+                            <p>У нас вы найдете самые красивые и редкие растения в городе: филодендрон, алоказия,
+                                церопегия и многие другие</p>
+                        </li>
+
+                        <li>
+                            <svg aria-hidden="true" focusable="false" width="40" height="40">
+                                <use href="img/sprite.svg#icon-leaf"></use>
+                            </svg>
+                            <h3>Консультации по уходу</h3>
+                            <p>Мы подробно расскажем и объясним как ухаживать за растением, чтобы оно радовало вас
+                                долгие годы!</p>
+                        </li>
+
+                        <li>
+                            <svg aria-hidden="true" focusable="false" width="40" height="40">
+                                <use href="img/sprite.svg#icon-leaf"></use>
+                            </svg>
+                            <h3>Экологичность</h3>
+                            <p>А еще мы варим очень вкусный кофе по приятной цене! А наши стаканчики сделаны из
+                                перерабатываемого материала</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="catalog" id="catalog">
+                <div class="container catalog__container">
+                    <h2>Наши растения</h2>
+
+                    <ul>
+                        {{#each mainPagePlants}}
+                        {{> card }}
+                        {{/each}}
+                    </ul>
+
+                    <a class="catalog__link" href="catalog.html">Показать больше</a>
+                </div>
+            </section>
+
+            <section class="feedback" id="feedback">
+                <h2 class="visually-hidden">Обратная связь.</h2>
+                <div class="container feedback__container">
+                    <form>
+                        <span>Появились вопросы?
+                            <br>
+                            Пишите нам, и мы скоро ответим!</span>
+
+                        <label>
+                            <input type="text" name="name" placeholder="Имя" title="Пожалуйста, напишите ваше имя, чтобы мы знали, как к вам обращаться" required>
+                            <span class="visually-hidden">Имя.</span>
+                        </label>
+
+                        <label>
+                            <input type="email" name="email" placeholder="E-mail" title="Пожалуйста, введите вашу почту, чтобы мы знали, куда направить ответ" required>
+                            <span class="visually-hidden">Email.</span>
+                        </label>
+
+                        <label class="feedback__message">
+                            <textarea name="question" placeholder="Ваш вопрос" rows="4" title="Введите интересующий вас вопрос" required></textarea>
+                            <span class="visually-hidden">Ваш вопрос</span>
+                        </label>
+
+                        <button class="btn feedback__btn" type="submit">
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="contacts" id="contacts">
+                <h2 class="visually-hidden">Контакты.</h2>
+                <div class="container contacts__container">
+                    <div class="contacts__content">
+                        <ul>
+                            <li>
+                                <h4>Адрес:</h4>
+                                <address>г. Калининград, ул. Интернациональная, 74</address>
+                            </li>
+
+                            <li>
+                                <h4>Телефон:</h4>
+                                <a href="tel:+79118630089">+7 (911) 863 00 89</a>
+                            </li>
+
+                            <li>
+                                <h4>График работы:</h4>
+                                <span>Пн-Пт, с 8-00 до 20-00</span>
+                                <br>
+                                <span>Сб-Вс, с 10-00 до 20-00</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id=map class="contacts__map">
+                        <span>Пожалуйста, подождите, пока загрузится карта</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer__container">
+                <a href="index.html">
+                    <svg width="80" height="48" role="img" aria-hidden="true" focusable="false">
+                        <use href="img/sprite.svg#logo-soul"></use>
+                    </svg>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="https://instagram.com/dusha_botanica" title="Инстаграм &mdash; социальная сеть, деятельность которой запрещена на территории РФ">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30">
+                                <use href="img/sprite.svg#icon-ig"></use>
+                            </svg>
+                            <span class="visually-hidden">Инстаграм* *Инстаграм &mdash; социальная сеть, деятельность которой запрещена на территории РФ.</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://vk.com/club218947504" title="ВКонтакте">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30">
+                                <use href="img/sprite.svg#icon-vk"></use>
+                            </svg>
+                            <span class="visually-hidden">Вконтакте.</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="index.html">
+                    <svg width="80" height="48" role="img" aria-hidden="true" focusable="false">
+                        <use href="img/sprite.svg#logo-jiva"></use>
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

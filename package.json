@@ -1,0 +1,25 @@
+{
+  "name": "jiva",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nothingissafefck/jiva.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nothingissafefck/jiva/issues"
+  },
+  "homepage": "https://github.com/nothingissafefck/jiva#readme",
+  "devDependencies": {
+    "sass": "1.62.1",
+    "vite": "4.3.9",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-svg-sprite-wrapper": "1.0.3"
+  }
+}

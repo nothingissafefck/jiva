@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Душа: кофе и растения">
+    <title>Душа: растения и кофе</title>
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/montserrat/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="sass/style.scss">
+</head>
+<body>
+    <div class="wrapper">
+        {{> header }}
+
+        <main>
+            <section class="breadcrumbs">
+                <h2 class="visually-hidden">Навигация страницы каталога.</h2>
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="index.html" tabindex="0">Главная</a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#" tabindex="0">Каталог</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="catalog">
+                <h1>Каталог</h1>
+
+                <div class="container catalog__container">
+                    <ul>
+                        {{#each catalogPlants}}
+                        {{> card }}
+                        {{/each}}
+                    </ul>
+
+                    <div class="catalog__info">
+                        <span>На сайте представлены не все наши растения
+                            <br>
+                            Увидеть больше и приобрести понравившееся вы можете, посетив нас</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer__container">
+                <a href="index.html">
+                    <svg width="80" height="48" role="img" aria-hidden="true" focusable="false">
+                        <use href="img/sprite.svg#logo-soul"></use>
+                    </svg>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="https://instagram.com/dusha_botanica" title="Инстаграм &mdash; социальная сеть, деятельность которой запрещена на территории РФ">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30">
+                                <use href="img/sprite.svg#icon-ig"></use>
+                            </svg>
+                            <span class="visually-hidden">Инстаграм* *Инстаграм &mdash; социальная сеть, деятельность которой запрещена на территории РФ.</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://vk.com/club218947504" title="ВКонтакте">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30">
+                                <use href="img/sprite.svg#icon-vk"></use>
+                            </svg>
+                            <span class="visually-hidden">Вконтакте.</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="index.html">
+                    <svg width="80" height="48" role="img" aria-hidden="true" focusable="false">
+                        <use href="img/sprite.svg#logo-jiva"></use>
+                    </svg>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

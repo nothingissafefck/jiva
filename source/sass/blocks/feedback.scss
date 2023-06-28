@@ -1,0 +1,110 @@
+.feedback {
+  margin-bottom: 100px;
+  background-color: $silver;
+  background-image: url("../../img/form-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+
+
+  @media (max-width: $vp-max-mobile) {
+    margin-bottom: 60px;
+  }
+}
+
+.feedback__container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px 40px;
+
+  span {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $white;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    @media (max-width: $vp-max-mobile) {
+      font-size: 14px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    background: $grey-asparagus;
+    margin: 10px 30px 10px 10px;
+    padding: 30px;
+    row-gap: 20px;
+    border-radius: 4px;
+
+    @media (max-width: $vp-max-mobile) {
+      margin: 10px 0 10px 0;
+    }
+
+    input {
+      padding: 10px 15px 10px;
+      width: 100%;
+      font-family: $ff-montserrat;
+      font-size: 12px;
+      color: $grey-asparagus;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+
+      &:focus:not(:valid) {
+        color: $razzmatazz;
+        box-shadow: inset 0 0 0 1px $razzmatazz;
+      }
+    }
+
+    textarea:focus:not(:valid) {
+      color: $razzmatazz;
+      box-shadow: inset 0 0 0 1px $razzmatazz;
+    }
+  }
+}
+
+.feedback__message {
+  grid-column: -2 / -1;
+  grid-row: 2 / 4;
+
+  textarea {
+    margin: 0;
+    padding: 10px 15px 10px;
+    width: 100%;
+    height: 100%;
+    font-family: $ff-montserrat;
+    font-size: 12px;
+    color: $grey-asparagus;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+  }
+}
+
+.feedback__btn {
+  font-size: 16px;
+  background-color: $white;
+  color: $grey-asparagus;
+  border-radius: 4px;
+
+  @media (max-width: $vp-max-mobile) {
+    font-size: 14px;
+  }
+
+  &:hover,
+  &focus {
+    background-color: $dark-sea-green;
+  }
+
+  &:active {
+    background-color: $myrtle;
+    color: $white;
+  }
+}
+
