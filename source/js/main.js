@@ -1,6 +1,6 @@
 import {initMenu} from './modules/menu.js';
 import {initMap} from './modules/map.js';
-import {initForm} from './modules/form.js';
+// import {initForm} from './modules/form.js';
 
 window.addEventListener('load', () => {
     initMenu();
