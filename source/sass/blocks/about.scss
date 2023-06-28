@@ -52,7 +52,7 @@
     border-radius: 5px;
 
     @media (max-width: $vp-max-mobile) {
-      width: 100%;
+      display: none;
     }
   }
 }
